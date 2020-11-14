@@ -19,7 +19,7 @@ def func_time(func):
     def function(*args):
         start_time = time.time()
         func(args[0])
-        print(f'{round(time.time() - start_time,8)} миллисекунд')
+        print(f'{round(time.time() - start_time,8)} секунд')
     return function
 
 @func_time
