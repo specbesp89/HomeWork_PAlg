@@ -15,3 +15,21 @@
 Введите пароль еще раз для проверки: 123
 Вы ввели правильный пароль
 """
+from uuid import uuid4
+import hashlib
+
+def recurce():
+    salt = uuid4().hex
+    password = input('Введите пароль: ')
+    res1 = hashlib.sha256(salt.encode() + password.encode()).hexdigest()
+    print(f'пароль в вид хэша - {res1}')
+    password = input('Введите пароль ещё раз: ')
+    res2 = hashlib.sha256(salt.encode() + password.encode()).hexdigest()
+    print(f'пароль в вид хэша - {res2}')
+
+    if res1 == res2:
+        print('Вход осуществлён')
+    else:
+        print('Попробуй ещё раз')
+        return recurce()
+recurce()
