@@ -32,7 +32,7 @@ def my_func(n):
 
 my_string = input('введите строку: ')
 
-print(f'Количество подстрок в строке "{my_string}" : {len(my_func(my_string))}')
+print(f'Количество подстрок в строке  "{my_string}" : {len(my_func(my_string))}')
 
 
 

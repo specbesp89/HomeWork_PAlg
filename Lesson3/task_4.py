@@ -33,7 +33,7 @@ class CacheClass:
             return f'{URL} записан в КЭШ'
 
     def pop_out(self, URL):
-        print(f'{URL} удален из КЭШа')
+        print(f'{URL} удален из КЭШа ')
         return self.cache.pop(URL)
 
 

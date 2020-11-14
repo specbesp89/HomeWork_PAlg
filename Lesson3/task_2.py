@@ -30,6 +30,6 @@ def recurce():
     if res1 == res2:
         print('Вход осуществлён')
     else:
-        print('Попробуй ещё раз')
+        print('Попробуй ещё раз ')
         return recurce()
 recurce()
